@@ -13,25 +13,7 @@ public class StatementPrinter {
 
         for (var perf : invoice.getPerformances()) {
             var play = plays.get(perf.getPlayID());
-            var thisAmount = 0;
-
-            switch (play.getType()) {
-                case "tragedy":
-                    thisAmount = 40000;
-                    if (perf.getAudience() > 30) {
-                        thisAmount += 1000 * (perf.getAudience() - 30);
-                    }
-                    break;
-                case "comedy":
-                    thisAmount = 30000;
-                    if (perf.getAudience() > 20) {
-                        thisAmount += 10000 + 500 * (perf.getAudience() - 20);
-                    }
-                    thisAmount += 300 * perf.getAudience();
-                    break;
-                default:
-                    throw new Error("unknown type: ${play.type}");
-            }
+            int thisAmount = countAmount(perf, play);
 
             // add volume credits
             volumeCredits += Math.max(perf.getAudience() - 30, 0);
@@ -45,6 +27,29 @@ public class StatementPrinter {
         result += String.format("Amount owed is %s\n", frmt.format(totalAmount / 100));
         result += String.format("You earned %s credits\n", volumeCredits);
         return result;
+    }
+
+    private int countAmount(Performance perf, Play play) {
+        var thisAmount = 0;
+
+        switch (play.getType()) {
+            case "tragedy":
+                thisAmount = 40000;
+                if (perf.getAudience() > 30) {
+                    thisAmount += 1000 * (perf.getAudience() - 30);
+                }
+                break;
+            case "comedy":
+                thisAmount = 30000;
+                if (perf.getAudience() > 20) {
+                    thisAmount += 10000 + 500 * (perf.getAudience() - 20);
+                }
+                thisAmount += 300 * perf.getAudience();
+                break;
+            default:
+                throw new Error("unknown type: ${play.type}");
+        }
+        return thisAmount;
     }
 
 }
