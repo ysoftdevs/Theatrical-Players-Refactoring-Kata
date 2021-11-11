@@ -61,6 +61,9 @@ Get feedback on your Mob session
 * Milan Schwarz -> milan.schwarz@ysoft.com
 * Radim Göth -> radim.goeth@ysoft.com
 * Tomáš Líška -> tomas.liska@ysoft.com
+* Roman Mátl -> roman.matl@ysoft.com
+* Filip Koňařík -> filip.konarik@ysoft.com
+* Martin Kubala -> martin.kubala@ysoft.com
 
 Best practices
 ====================================
