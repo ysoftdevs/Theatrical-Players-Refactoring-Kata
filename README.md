@@ -58,12 +58,7 @@ Get feedback on your Mob session
 * get feedback on format of the session -> just contact us and describe, how we can help you
 
 **Contact info:**
-* Milan Schwarz -> milan.schwarz@ysoft.com
-* Radim Göth -> radim.goeth@ysoft.com
-* Tomáš Líška -> tomas.liska@ysoft.com
-* Roman Mátl -> roman.matl@ysoft.com
-* Filip Koňařík -> filip.konarik@ysoft.com
-* Martin Kubala -> martin.kubala@ysoft.com
+* Milan Schwarz -> milan.schwarz@gmail.com
 
 Best practices
 ====================================
